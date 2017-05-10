@@ -1121,7 +1121,7 @@
             this.updateView();
             this.container.show();
             this.move();
-            this.element.trigger('show.daterangepicker', this);
+            this.element.triggerHandler('show.daterangepicker', this);
             this.isShowing = true;
         },
 
@@ -1144,7 +1144,7 @@
             $(document).off('.daterangepicker');
             $(window).off('.daterangepicker');
             this.container.hide();
-            this.element.trigger('hide.daterangepicker', this);
+            this.element.triggerHandler('hide.daterangepicker', this);
             this.isShowing = false;
         },
 
@@ -1168,18 +1168,18 @@
                 target.closest('.calendar-table').length
                 ) return;
             this.hide();
-            this.element.trigger('outsideClick.daterangepicker', this);
+            this.element.triggerHandler('outsideClick.daterangepicker', this);
         },
 
         showCalendars: function() {
             this.container.addClass('show-calendar');
             this.move();
-            this.element.trigger('showCalendar.daterangepicker', this);
+            this.element.triggerHandler('showCalendar.daterangepicker', this);
         },
 
         hideCalendars: function() {
             this.container.removeClass('show-calendar');
-            this.element.trigger('hideCalendar.daterangepicker', this);
+            this.element.triggerHandler('hideCalendar.daterangepicker', this);
         },
 
         hoverRange: function(e) {
@@ -1399,14 +1399,14 @@
 
         clickApply: function(e) {
             this.hide();
-            this.element.trigger('apply.daterangepicker', this);
+            this.element.triggerHandler('apply.daterangepicker', this);
         },
 
         clickCancel: function(e) {
             this.startDate = this.oldStartDate;
             this.endDate = this.oldEndDate;
             this.hide();
-            this.element.trigger('cancel.daterangepicker', this);
+            this.element.triggerHandler('cancel.daterangepicker', this);
         },
 
         monthOrYearChanged: function(e) {
